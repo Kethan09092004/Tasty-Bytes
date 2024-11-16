@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Ordering System - Register</title>
+    <style>
+      /* Include styles from login page */
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f5f5f5;
+        background-image: url('img/img3.avif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        backdrop-filter: blur(2px);
+      }
+
+      .login-container {
+        background-color: #f0f0f072;
+        backdrop-filter: blur(20px);
+        padding: 30px;
+        border-radius: 50px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 400px;
+      }
+
+      .login-form-wrapper {
+        text-align: center;
+      }
+
+      .logo {
+        width: 150px;
+        margin-bottom: 20px;
+      }
+      .logo:hover{
+        box-shadow: rgb(228, 19, 117),
+                    rgb(228, 19, 117),
+                    rgb(228, 19, 117),
+                    rgb(228, 19, 117);
+      }
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+        padding:5px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      .form-group input:hover {
+        background-color: aqua;
+        color: black;
+      }
+
+      .login-form button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .login-form button:hover {
+        background-color: #3e8e41;
+      }
+
+      .login-text {
+        margin-top: 20px;
+      }
+
+      .login-text a {
+        color: #4caf50;
+        text-decoration: none;
+        }
+        .submit {
+            width: 100px;
+            height: 40px;
+           
+            background-color: red;
+            border: none;
+            border-radius: 20px;
+            color: black;
+            cursor: pointer;
+        }
+        .submit:hover{
+            background-color:rgb(51, 184, 240);
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .reset{
+          width:100px;
+          height:40px;
+          
+          background-color:red;
+          border:none;
+          border-radius: 20px;
+          color:black;
+          cursor:pointer;
+
+        }
+        .reset:hover{
+          background-color:aquamarine;
+          text-transform:uppercase;
+          font-weight:600;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-form-wrapper">
+        <img src="img/logo.jpg" alt="Food Ordering System Logo" class="logo" />
+        <h2>Create Your Account</h2>
+        <form id="register-form" action="register.jsp">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="name" required />
+          </div>
+          <div class="form-group">
+            <label for="name"> User Name</label>
+            <input type="text" id="uname" name="uname" placeholder="Username" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required/>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required />
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              placeholder="Confirm Password"
+              required
+            />
+            <div class="form-group">
+              <label for="password">Mobile Number</label>
+              <input type="number" id="phno" name="phno" placeholder="mobile number" required />
+            </div>
+            <div class="form-group">
+              <label for="city">Enter city Name</label>
+              <input type="city" id="city" name="city" placeholder="city name" required />
+            </div>
+          </div>
+          <button type="submit" class="submit">Register</button>
+          <button type="reset" class="reset">Reset</button>
+          <p class="login-text">
+            Already have an account? <a href="login.html">Login Here</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script>
+          // Add validation for confirm password to match password
+      const registerForm = document.getElementById('register-form');
+      const passwordInput = document.getElementById('password');
+      const confirmPasswordInput = document.getElementById('confirm-password');
+
+      registerForm.addEventListener('submit', (event) => {
+        if (passwordInput.value !== confirmPasswordInput.value) {
+          event.preventDefault();
+          alert('Passwords do not match!');}})
+    </script>
+  </body>
+</html>

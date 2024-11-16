@@ -1,0 +1,264 @@
+
+
+
+:root{
+    --mainColor:#f6f8fa;
+    --darkBlack:#2d2f31;
+    --darkGrey:#61666b;
+    --grey:#d5d5d5;
+    --lightGrey:#f2f2f2;
+    --yellow:#fecb40;
+    --red:#df113c;
+ }
+ 
+ 
+ *{
+     margin:0;
+     padding:0;
+     outline:none;
+     box-sizing: border-box;
+     font-family:"Noto Sans JP",sans-serif;
+ }
+ body{
+     width:100%;
+     height: auto;
+     color:var(--darkBlack);
+ }
+ p{
+     font-size: 14px;
+     color:#000;
+ }
+ h4{
+     font-size:13px;
+     color:#000;
+ }
+ .login{
+     height:30px;
+     width:80px;
+     color:rgb(18, 2, 2);
+     background-color: rgb(236, 240, 242);
+     border-radius:20px;
+     margin-bottom:10px;
+     text-decoration-line: none;
+     margin-left:1100px;
+     text-decoration: none;
+     cursor: pointer;
+ }
+ 
+ .login:hover{
+     background-color: rgb(238, 12, 12);
+     text-transform:uppercase;
+     text-overflow: ellipsis;
+     text-shadow: #61666b;
+     cursor: pointer;
+     color:rgb(234, 225, 225);
+ }
+ .label-cart{
+     position: fixed;
+     top:15;
+     right: 10;
+     z-index:4;
+     cursor: pointer;
+     display: none;
+ }
+ .banner{
+     position: fixed;
+     top:15;
+     right: 10;
+     z-index:4;
+     width: 20px;
+     height: 5px;
+     padding: 10px 5px;
+     cursor: pointer;
+ }
+ .logo{
+     position: fixed;
+     background-color: var(--darkBlack);
+     color: var(--lightGrey);
+     width:100%;
+     text-size-adjust: 200px;
+     height:60px;
+     text-align: center;
+     padding:5px 400px 35px 260px;
+     top:0;
+     z-index:20;
+ }
+ .sidebar{
+     position: fixed;
+     top:0;
+     left:0;
+     width:55px;
+     height:100%;
+     background-color: var(--mainColor);
+     z-index: 1;
+     padding-top:70px;
+ }
+ .sidebar-menu{
+     width:100%;
+     text-align: center;
+     padding:10px 6px;
+     color:var(--darkGrey);    
+ }
+ .sidebar-menu a{
+     text-decoration: none;
+     
+     font-size: 0.7rem;
+     line-height:2;
+     color:var(--darkGrey);
+ }
+ .sidebar-menu:hover{
+     border-right: 2px solid --yellow;
+     text-decoration-line: overline;
+     text-decoration-color: #df113c;
+     text-overflow:var(--lightGrey);
+     text-size-adjust: 40px;
+     touch-action: pinch-zoom;
+ 
+     color:rgb(231, 15, 15);
+     touch-action: pinch-zoom;
+     text-size-adjust: 100px;
+ }
+ .sidebar-menu:hover a{
+     color:rgb(223, 23, 110);
+ }
+ .dashboard{
+     height:100%;
+     width: 100%;
+     padding-left: 50px;
+ }
+ .dashboard-banner{
+     width: 100%;
+     height: 300px;
+     position: relative;
+     margin-top: 4rem;
+     padding: 1rem;
+     border-radius: 30px;
+     cursor: pointer;
+ }
+ .dashboard-banner img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 30px;
+ }
+ .banner-promo{
+     position: absolute;
+     color: var(--lightGrey);
+     top: 25%;
+     left: 10%;
+     font-weight: 800;
+ }
+ .banner-promo h1 span{
+     color: var(--yellow);
+ }
+ .dashboard-title{
+     padding: 0 2rem;
+     
+ }
+ .dashboard-title1{
+     padding-left: 20px;
+     padding-top: 40px;
+ }
+ .dashboard-menu{
+     display: flex;
+     gap: 10px;
+     padding: 0.3rem 1rem;
+     overflow: auto;
+ }
+ .dashboard-menu a{
+     text-decoration: none;
+     text-align: center;
+     border-radius: 20px;
+     min-width: 120px;
+     padding: 0.5rem 0;
+     font-size: 0.9rem;
+     color: var(--darkBlack);
+     background-color: #61666b;
+ }
+ .dashboard-menu a:hover{
+     background-color: var(--red);
+     color:var(--lightGrey);
+ }
+ .dash-con{
+     display: grid;
+     grid-template-columns: repeat(auto-fit ,minmax(250px,1fr));
+     gap: 40px;
+     padding: 0.5rem 1rem 1rem 1rem;
+ }
+ .dashboard-card{
+     background-color: var(--mainColor);
+     box-shadow: rgba(0,0,0,0.15);
+     border-radius: 15px;
+     position: relative;
+     cursor: pointer;
+     padding:10px;
+ }
+ .dashboard-card:hover{
+     box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+ }
+ .dashboard-card button{
+     padding:10px 20px;
+     color:#61666b;
+     border-radius: 25px;
+     align-self: center;
+ }
+ .dashboard-card button:hover{
+     background-color:#df113c;
+     color:var(--grey);
+     cursor: pointer;
+ }
+ .card-image{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-detail{
+    padding: 10px;
+}
+.card-detail h4 span{
+    float: right;  
+}
+.card-time{
+    color:var(--darkGrey);
+    font-size: 0.9rem;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+ footer{
+     text-align: center;
+     padding:20px 15px;
+     color: #000;
+ }
+
+
+
+
+
+
+ .scroll-menu{
+     background-color:#e3dddd;
+     width:100%;
+     position:relative;
+     overflow: auto;
+     white-space:nowrap;
+ }
+ .scroll-menu .dash-con{
+     display:flex;
+     color:white;
+     text-align:center;
+     padding:14px;
+     text-decoration:none;
+ }
+ .seemore{
+     margin-top:90px;
+ }
+ 
